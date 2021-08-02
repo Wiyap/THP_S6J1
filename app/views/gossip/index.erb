@@ -1,0 +1,9 @@
+<h1> Bienvenue l'ami.e!</h1>
+
+<h3> Voici la liste des gossips:<h3>
+<ul class="wlc">
+  <% @all_gossip.each do |gossip| %>
+    <li>"<%= gossip.title %>" de <%= User.find(gossip.user_id).first_name %> <%= User.find(gossip.user_id).last_name %>
+  <% end %>
+</ul>
+
